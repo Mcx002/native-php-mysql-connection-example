@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "4878f596-d705-4a28-b87d-da99641df49a",
+		"name": "user_service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12137361"
+	},
+	"item": [
+		{
+			"name": "Get Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/01-user-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"joki",
+						"01-user-service"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/01-user-service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"joki",
+								"01-user-service"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 06:20:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"User Service\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Users : Soal No 2:2, 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/01-user-service/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"joki",
+						"01-user-service",
+						"users"
+					],
+					"query": [
+						{
+							"key": "filter[active]",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "filter[loginMoreThan3]",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Active Users : Soal No 2:2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/01-user-service/users?filter[active]=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"joki",
+								"01-user-service",
+								"users"
+							],
+							"query": [
+								{
+									"key": "filter[active]",
+									"value": "1"
+								},
+								{
+									"key": "filter[loginMoreThan3]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 07:56:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "129"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1\",\n        \"nim\": \"32210100\",\n        \"name\": \"NADIA NUR LATIFAH\",\n        \"loginCount\": \"0\",\n        \"active\": \"1\"\n    },\n    {\n        \"id\": \"4\",\n        \"nim\": \"32210040\",\n        \"name\": \"NURRIPA ANANDA UTAMI\",\n        \"loginCount\": \"4\",\n        \"active\": \"1\"\n    }\n]"
+				},
+				{
+					"name": "List All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/01-user-service/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"joki",
+								"01-user-service",
+								"users"
+							],
+							"query": [
+								{
+									"key": "filter[active]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "filter[loginMoreThan3]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 08:05:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "183"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"id\":\"1\",\"nim\":\"32210100\",\"name\":\"NADIA NUR LATIFAH\",\"loginCount\":\"0\",\"active\":\"1\"},{\"id\":\"2\",\"nim\":\"32210074\",\"name\":\"EVA YULIANTINI CAHYA\",\"loginCount\":\"0\",\"active\":\"0\"},{\"id\":\"3\",\"nim\":\"32210124\",\"name\":\"JAKI BAGJA ILAHI\",\"loginCount\":\"0\",\"active\":\"0\"},{\"id\":\"4\",\"nim\":\"32210040\",\"name\":\"NURRIPA ANANDA UTAMI\",\"loginCount\":\"4\",\"active\":\"1\"}]"
+				},
+				{
+					"name": "List User Login more than 3 : Soal No 3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/01-user-service/users?filter[loginMoreThan3]=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"joki",
+								"01-user-service",
+								"users"
+							],
+							"query": [
+								{
+									"key": "filter[active]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "filter[loginMoreThan3]",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 08:06:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"4\",\n        \"nim\": \"32210040\",\n        \"name\": \"NURRIPA ANANDA UTAMI\",\n        \"loginCount\": \"4\",\n        \"active\": \"1\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get User : Soal No 2:1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/01-user-service/users?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"joki",
+						"01-user-service",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/01-user-service/users?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"joki",
+								"01-user-service",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 08:04:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1\",\n        \"nim\": \"32210100\",\n        \"name\": \"NADIA NUR LATIFAH\",\n        \"loginCount\": \"0\",\n        \"active\": \"1\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Insert User : Soal No 2:3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/01-user-service/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"joki",
+						"01-user-service",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nim",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "loginCount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/01-user-service/users/index.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"joki",
+								"01-user-service",
+								"users",
+								"index.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Nov 2023 10:32:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.56 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"nim\": \"1234\",\n    \"name\": \"test\",\n    \"loginCount\": 1,\n    \"active\": true\n}"
+				}
+			]
+		}
+	]
+}
