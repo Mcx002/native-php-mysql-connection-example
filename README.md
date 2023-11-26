@@ -8,5 +8,5 @@ Sebuah program php untuk proses connect ke db MYSQL
 ## Installation
 - Clone atau download repository ini
 - Simpan ke xampp/htdocs. [detail](https://www.rumahweb.com/journal/cara-menjalankan-script-php-di-localhost-htdocs-xampp/)
-- Jalankan [query dump](./dump-user_service-202311261721.sql)
-- Import [postman json](./user_service.postman_collection.json)
+- Jalankan [query dump](./dump-user_service-202311261721.sql) di sql client kesayangan anda
+- Import [postman json](./user_service.postman_collection.json) dalam aplikasi postman
